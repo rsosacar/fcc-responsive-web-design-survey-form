@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Mali|Questrial&display=swap" rel="stylesheet">
+    	<style type="text/css">
+            html {
+                background: linear-gradient(90deg, #D9C4FF, #FFFEE3);
+            }
+
+            h1 {
+                font-family: 'Mali', cursive;
+            }
+
+            p {
+                font-family: 'Questrial', sans-serif;
+            }
+
+            #container {
+                text-align: center;
+            }
+
+            #information {
+                text-align: center;
+            }
+
+            #form {
+                min-width: 80%;
+                display: inline-block;
+                background-color: white;
+                padding: 20px;
+            }
+
+            .form-group {
+                font-family: 'Questrial', sans-serif;
+                margin-top: 10px;
+            }
+
+            .form-control {
+                display: inline-block;
+                text-align: left;
+                width: 48%;
+                margin-left: 10px;
+            }
+
+            .label{
+                font-size: 18px;
+                display: inline-block;
+                text-align: right;
+                width: 48%;
+            }
+
+            ul {
+                list-style: none;
+                margin-left: -45px !important;
+            }
+
+            .input{
+                width: 200px;
+            }
+            
+            textarea {
+                resize: none;
+            }
+
+            button {
+                background-color: #8C78B3;
+                border: 0;
+                width: 100px;
+                padding: 7px;
+                border-radius: 5px;
+            }
+    	</style>
+  	</head>
+  	<body>
+        <div id="container">
+        	<main id="main">
+                <div id="information">
+                    <h1 id="title">Pastries Survey</h1>
+                    <p id="description">We would like to know about your favorite pastries</p>
+                </div>
+                <div id="form">
+            		<form id="survey-form">
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="name" id="name-label">Name:</label>
+                            </div>
+                            <div class="form-control">
+                                <input type="text" id="name" placeholder="Type your name and lastname" class="input" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="email" id="email-label">E-Mail:</label>
+                            </div>
+                            <div class="form-control">
+                                <input type="email" id="email" placeholder="Type a valid e-mail address" class="input" required>
+                            </div>
+                        </div>
+
+                         <div class="form-group">
+                            <div class="label">
+                                <label for="number" id="number-label">Age:</label>
+                            </div>
+                            <div class="form-control">
+                                <input type="number" id="number" min="1" max="100" placeholder="Number between 1 and 100" class="input">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="radio_buttons" id="dropdown-label">If you only had money to buy one of these pastries, which one would you choose?:</label>
+                            </div>
+                            <div class="form-control">
+                                <ul>
+                                    <li>
+                                        <label for="sweet_milk_bread"> 
+                                          <input id="sweet_milk_bread" type="radio" name="radio_buttons" value="Sweet Milk Bread">Sweet Milk Bread
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="chocolate_brioche_rolls"> 
+                                          <input id="chocolate_brioche_rolls" type="radio" name="radio_buttons" value="Chocolate Brioche Rolls">Chocolate Brioche Rolls
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="guava_bread"> 
+                                          <input id="guava_bread" type="radio" name="radio_buttons" value="Guava Bread">Guava Bread
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="tart"> 
+                                          <input id="tart" type="radio" name="radio_buttons" value="Tart">Tart
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="bread_cake"> 
+                                          <input id="bread_cake" type="radio" name="radio_buttons" value="Bread Cake">Bread Cake
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="spiral_bread"> 
+                                          <input id="spiral_bread" type="radio" name="radio_buttons" value="Spiral-Shaped Sweet Bread">Spiral-Shaped Sweet Bread
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="all_above"> 
+                                          <input id="all_above" type="radio" name="radio_buttons" value="All of the Above">All of the Above (I always have money)
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="dropdown" id="dropdown-label">Do you share your pastries with your friends?:</label>
+                            </div>
+                            <div class="form-control">
+                                <select id="dropdown" class="input">
+                                  <option disabled value>Select an option</option>
+                                  <option value="yes">Yes</option>
+                                  <option value="no">No</option>
+                                  <option value="sometimes">Sometimes</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="checkboxes" id="checkboxes-label">Where do you buy your favorite pastries?:</label>
+                            </div>
+                            <div class="form-control" id="checkboxes">
+                                <ul>
+                                    <li>
+                                        <label for="bakery">
+                                            <input id="bakery" type="checkbox" name="checkboxes" value="bakery">Bakery
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="street_vendors">
+                                            <input id="street_vendors" type="checkbox" name="checkboxes" value="street_vendors">Street Vendors
+                                        </label>
+                                    </li>
+                                    <li>
+                                        <label for="myself">
+                                            <input id="myself" type="checkbox" name="checkboxes" value="myself">I prepare them myself
+                                        </label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="label">
+                                <label for="comments" id="comments-label">Please talk to us about other pastries that aren't mentioned here:</label>
+                            </div>
+                            <div class="form-control">
+                                <textarea id="comments" placeholder="Enter your comments here" class="input" rows="4"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" id="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+        	</main>
+        </div>
+  	</body>
+</html>
